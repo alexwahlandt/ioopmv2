@@ -1,0 +1,38 @@
+#include "utils.h"
+#include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(){
+  int buf_siz = 255;
+  char buf[buf_siz];
+
+  srand(time(NULL));
+  int random = random() % 1024
+  int guess;
+  
+  ask_question_string("Skriv in ditt namn: ", buf, buf_siz);
+
+  printf("Du %s, jag tänker på ett tal...", buf);
+  guess = ask_question_int(" kan du gissa vilket: ");
+
+  
+  int counter = 0;
+  while(guess != random){
+    if (guess < random) {
+      puts("För litet!\n");
+      guess = ask_question_int("Gissa igen: ");
+      counter ++;
+    }else if (guess > random){
+      puts("För stort!\n");
+      guess = ask_question_int("Gissa igen: ");
+      counter ++;
+    }else{
+      printf("Du har gissat för många gånger, svaret är : %d", random);
+    }
+    
+    
+  }
+  
+  
+}

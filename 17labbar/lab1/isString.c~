@@ -1,0 +1,6 @@
+#include <stdio.h>
+
+int isString(){
+  printf("Detta är isString.g")
+
+}
