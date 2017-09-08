@@ -7,6 +7,8 @@ struct point{
   int y;
 };
 
+
+// Fin kommentar
 int main(){
   point_t p;
   p.x = 2;
