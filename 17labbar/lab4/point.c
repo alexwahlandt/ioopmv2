@@ -8,6 +8,14 @@ struct point{
 };
 
 
+
+void translate(point_t *p1, point_t *p2)
+{
+  p1->x += p2->x;
+  p1->y += p2->y;
+}
+
+
 // Fin kommentar
 int main(){
   point_t p;
@@ -18,3 +26,5 @@ int main(){
   point_t p2 = {.x = 102, .y=250};
   printf("punkt: (%d,%d)\n",p2.x,p2.y );  
 }
+
+
